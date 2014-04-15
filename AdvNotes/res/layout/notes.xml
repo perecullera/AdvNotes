@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/titol"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dip"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/titoltext"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="Títol" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dip"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/desctext"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="Títol" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/mapa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dip"
+        android:orientation="vertical"
+        android:visibility="gone"
+        >
+       <fragment
+            android:id="@+id/mapaFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            class="com.google.android.gms.maps.MapFragment" /> 
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/gravacio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dip"
+        android:orientation="vertical" >
+
+        <MediaController
+            android:id="@+id/mediaController1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.87" 
+            android:onClick="onClickRepro">
+        </MediaController>
+    </LinearLayout>
+    <LinearLayout 
+        android:id="@+id/imatge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dip"
+        android:orientation="vertical"
+        ></LinearLayout>
+	<LinearLayout 
+	    android:id="@+id/esborra"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dip"
+	    >
+
+		<Button
+		    android:id="@+id/btnesborra"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:text="Esborra"
+		    android:onClick="onClickEsborra" />
+
+	</LinearLayout>
+</LinearLayout>

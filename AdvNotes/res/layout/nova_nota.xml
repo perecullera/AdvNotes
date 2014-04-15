@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageButton
+            android:id="@+id/nota_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_action_copy"
+            android:onClick="onButtonClicked" />
+        	
+
+        <ImageButton
+            android:id="@+id/nota_foto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_action_camera"
+            android:onClick="onButtonClicked" />
+
+        <ImageButton
+            android:id="@+id/nota_loca"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_action_location_found"
+            android:onClick="onButtonClicked" />
+
+        <ImageButton
+            android:id="@+id/nota_veu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_action_mic" 
+            android:onClick="onButtonClicked"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/titollayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/titol"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Títol" >
+
+	 	</EditText>
+        <requestFocus />       
+    </LinearLayout>  
+    
+    <LinearLayout
+        android:id="@+id/descripciolayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/descripcio"
+            android:layout_width="match_parent"
+            android:layout_height="228dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Descripció" />
+
+        <requestFocus />  
+        
+    </LinearLayout>
+    <LinearLayout 
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="250dp" 
+        android:visibility="gone">
+        <fragment
+            android:id="@+id/mapaFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            class="com.google.android.gms.maps.MapFragment" />
+        
+    </LinearLayout>
+    <LinearLayout 
+        android:id="@+id/foto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:visibility="gone">
+        <ImageView
+			android:id="@+id/imageView1"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:onClick="fesFoto"
+			android:src="@drawable/camera"/>
+    </LinearLayout>
+    
+    <LinearLayout    
+    	android:id="@+id/veu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:visibility="gone">
+    	<ImageView
+			android:id="@+id/imageView2"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:src="@drawable/voice_search"
+			android:textOff="Gravar"
+			android:textOn="Aturar"
+			android:text="ToggleButton"
+			android:onClick="onClickBotoGravar"/>
+		<!-- <Button
+  			android:id="@+id/botoReproduir"
+  			android:layout_width="wrap_content"
+ 			android:layout_height="wrap_content"
+			android:layout_alignParentTop="true" 
+			android:layout_marginLeft="15dp" 
+			android:layout_toRightOf="@+id/botoGravar" 
+			android:text="Reproduir"
+			android:onClick="onClickBotoReproduir"/> -->
+	</LinearLayout>
+
+    <Button
+        android:id="@+id/afegeix"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Afegeix"
+        android:onClick="onClickAfegeix" />
+
+</LinearLayout>
+
+
